@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 const BottomContainerHeight = 80.0;
 const ContainerColour = Color(0xff1d1e33);
 const BottomContainerColour = Color(0xFFEB1555);
@@ -17,21 +18,32 @@ class _InputPageState extends State<InputPage> {
         appBar: AppBar(
           title: Text('BMI Calculator'),
         ),
-        floatingActionButton: Theme(
-          data: ThemeData(
-            accentColor: Colors.purpleAccent,
-          ),
-          child: FloatingActionButton(
-            child: Icon(Icons.add),
-          ),
-        ),
         body: Column(
           children: [
             Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: ContainerColour),
+                    child: ReusableCard(
+                      colour: ContainerColour,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            FontAwesomeIcons.mars,
+                            size: 70.0,
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          Text(
+                            'Male',
+                            style: TextStyle(
+                                fontSize: 18.0, color: Color(0xFF8D8E98)),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                   Expanded(child: ReusableCard(colour: ContainerColour))
                 ],
