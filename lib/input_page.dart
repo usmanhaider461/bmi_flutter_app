@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 const BottomContainerHeight = 80.0;
 const ContainerColour = Color(0xff1d1e33);
+const BottomContainerColour = Color(0xFFEB1555);
 
 class InputPage extends StatefulWidget {
   @override
@@ -45,7 +46,7 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             Container(
-              color: Color(0xFFEB1555),
+              color: BottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
               height: BottomContainerHeight,
